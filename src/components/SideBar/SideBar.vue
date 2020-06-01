@@ -35,7 +35,7 @@ export default {
 	methods: {
         selectTool(val) {
             // 跳转路由，并且屏蔽路由重复的错误信息
-            this.$router.replace(this.toolList[val].link).catch(err => {err})
+            this.$router.push(this.toolList[val].link).catch(err => {err})
         }
 	}
 }

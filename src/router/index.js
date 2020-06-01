@@ -6,9 +6,9 @@ Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Base64',
+    name: 'HomePage',
     component: function () {
-      return import('../views/Base64/Base64.vue')
+      return import('../views/HomePage/HomePage.vue')
     }
   },
   {
