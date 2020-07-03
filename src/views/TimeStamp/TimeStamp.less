@@ -3,5 +3,27 @@
     height: 100%;
     #main-content {
         margin-left: 210px;
+        padding: 20px;
+        .box-card {
+            .now-content, .stamp-time-content, .time-stamp-content {
+                .time-box {
+                    width: 200px;
+                }
+                .el-icon-document-copy {
+                    margin: 0 50px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+                .el-icon-document-copy:hover {
+                    color: #409EFF;
+                }
+                .trans-button {
+                    margin-right: 40px;
+                }
+            }
+        }
+        .box-card:nth-of-type(n+2) {
+            margin: 20px 0;
+        }
     }
 }

@@ -9,6 +9,11 @@
         <div v-for="(item, index) in toolList" :key="index" class="single-item-container" @click="selectTool(index)" v-show="isFold" ref="item">
             {{item.name}}
         </div>
+        <div class="bei-an-container" v-show="isFold">
+            <a href="http://beian.miit.gov.cn">
+                {{beian_text}}
+            </a>
+        </div>
         <!-- <div class="width-display">当前页面宽度：{{windowWidth}}</div> -->
 	</div>
 </template>
@@ -24,11 +29,11 @@ export default {
                     name: 'Base64转码',
                     link: 'Base64'
                 },
-                {
-                    id: 2,
-                    name: 'RGB和十六进制转换',
-                    link: 'Color'
-                },
+                // {
+                //     id: 2,
+                //     name: 'RGB和十六进制转换',
+                //     link: 'Color'
+                // },
                 {
                     id: 3,
                     name: 'MD5加密',
@@ -46,6 +51,7 @@ export default {
                 },
             ],
             windowWidth: 0,
+            beian_text: '苏ICP备20037045号', // 备案号
 		}
 	},
 	mounted() {

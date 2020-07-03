@@ -1,20 +1,45 @@
 .container {
-    width: 100%;
-    height: 100%;
-    #main-content {
-        margin-left: 210px;
-        display: flex;
-        .single-color-input {
-            width: 200px;
-        }
-        /deep/ #red_input:focus {
-            border-color: red;
-        }
-        /deep/ #green_input:focus {
-            border-color: green;
-        }
-        /deep/ #blue_input:focus {
-            border-color: blue;
-        }
-    }
+	width: 100%;
+	height: 100%;
+	#main-content {
+		margin-left: 210px;
+		padding: 20px;
+		.single-color-input {
+			width: 150px;
+		}
+		/deep/ #red_input:focus {
+			border-color: red;
+		}
+		/deep/ #green_input:focus {
+			border-color: green;
+		}
+		/deep/ #blue_input:focus {
+			border-color: blue;
+		}
+		/deep/ #alpha_input:focus {
+			border-color: rgb(192, 196, 204);
+		}
+		/deep/ input#hex-color_input:focus {
+			border-color: rgb(192, 196, 204);
+		}
+		.box-card {
+			margin: 20px 0;
+			.rgb-container {
+				.single-color-input:nth-of-type(n+2) {
+					margin-left: 20px;
+				}
+				.hex-color-input {
+					width: 450px;
+				}
+			}
+			.el-color-picker {
+				padding-top: 10px;
+			}
+			.show_text {
+				margin-left: 100px;
+				line-height: 50px;
+				cursor: pointer;
+			}
+		}
+	}
 }

@@ -4,8 +4,10 @@
 		<div id="main-content">
 			<h2 class="little-title">哔哩哔哩av和BV号转换</h2>
 			<div class="av-input">
-				<span class="front_link">https://www.bilibili.com/video/av</span>
-				<el-input class="back_link" size="small" v-model="av_input" ref='av_'></el-input>
+				<!-- <span class="front_link">https://www.bilibili.com/video/av</span> -->
+				<el-input class="back_link" size="small" v-model="av_input" ref='av_'>
+					<template slot="prepend">https://www.bilibili.com/video/av</template>
+				</el-input>
 			</div>
 			<div class="copy_button">
 				<el-button type="primary" plain @click="copy_av()">复制av号↑↑↑</el-button>
@@ -15,8 +17,10 @@
 				<el-button type="info" @click="clearInput()">全部清空</el-button>
 			</div>
 			<div class="BV-input">
-				<span class="front_link">https://www.bilibili.com/video/</span>
-				<el-input class="back_link" size="small" v-model="BV_input" ref='BV_'></el-input>
+				<!-- <span class="front_link">https://www.bilibili.com/video/BV</span> -->
+				<el-input class="back_link" size="small" v-model="BV_input" ref='BV_'>
+					<template slot="prepend">https://www.bilibili.com/video/</template>
+				</el-input>
 			</div>
 		</div>
 	</div>

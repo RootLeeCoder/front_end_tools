@@ -10,6 +10,9 @@ Vue.use(VueRouter)
     name: 'HomePage',
     component: function () {
       return import('../views/HomePage/HomePage.vue')
+    },
+    meta: {
+      title: '首页——前端工具合集'
     }
   },
   // Base64转码
@@ -18,6 +21,9 @@ Vue.use(VueRouter)
     name: 'Base64',
     component: function () {
       return import('../views/Base64/Base64.vue')
+    },
+    meta: {
+      title: 'Base64转码——前端工具合集'
     }
   },
   // RGB和十六进制转换
@@ -26,14 +32,20 @@ Vue.use(VueRouter)
     name: 'Color',
     component: function () {
       return import('../views/Color/Color.vue')
+    },
+    meta: {
+      title: 'RGB和十六进制转换——前端工具合集'
     }
   },
-  // MD5转码
+  // MD5加密
   {
     path: '/MD5',
     name: 'MD5',
     component: function () {
       return import('../views/MD5/MD5.vue')
+    },
+    meta: {
+      title: 'MD5加密——前端工具合集'
     }
   },
   // 时间戳转换
@@ -42,6 +54,9 @@ Vue.use(VueRouter)
     name: 'TimeStamp',
     component: function () {
       return import('../views/TimeStamp/TimeStamp.vue')
+    },
+    meta: {
+      title: '时间戳转换——前端工具合集'
     }
   },
   // 哔哩哔哩av和BV号互转
@@ -50,6 +65,9 @@ Vue.use(VueRouter)
     name: 'Bilibili',
     component: function () {
       return import('../views/Bilibili/Bilibili.vue')
+    },
+    meta: {
+      title: '哔哩哔哩av和BV号互转——前端工具合集'
     }
   },
 ]
