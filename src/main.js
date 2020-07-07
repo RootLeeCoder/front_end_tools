@@ -5,6 +5,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 import router from './router'
 import store from './store'
 import moment from 'moment';
+import 'font-awesome/css/font-awesome.css'
 
 Vue.prototype.$moment = moment;
 

@@ -9,9 +9,14 @@
         <div v-for="(item, index) in toolList" :key="index" class="single-item-container" @click="selectTool(index)" v-show="isFold" ref="item">
             {{item.name}}
         </div>
+        <i class="fa fa-github fa-3x github-icon" aria-hidden="true" @click="goRouter('github')"></i>
         <div class="bei-an-container" v-show="isFold">
             <a href="http://beian.miit.gov.cn">
-                {{beian_text}}
+                {{ICP_beian_text}}
+            </a>
+            <br>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32011202000443">
+                {{police_beian_text}}
             </a>
         </div>
         <!-- <div class="width-display">当前页面宽度：{{windowWidth}}</div> -->
@@ -24,11 +29,16 @@ export default {
 		return {
             isFold: true, // 侧边栏是否展开，默认为展开
             toolList: [ // 侧边栏列表
-                {
-                    id: 1,
-                    name: 'Base64转码',
-                    link: 'Base64'
-                },
+                    {
+                        id: 0,
+                        name: 'Base64和图片转换',
+                        link: 'Base64_Image'
+                    },
+                    {
+                        id: 1,
+                        name: 'Base64转码',
+                        link: 'Base64'
+                    },
                 // {
                 //     id: 2,
                 //     name: 'RGB和十六进制转换',
@@ -51,7 +61,8 @@ export default {
                 },
             ],
             windowWidth: 0,
-            beian_text: '苏ICP备20037045号', // 备案号
+            ICP_beian_text: '苏ICP备20037045号', // ICP备案号
+            police_beian_text: '苏公网安备32011202000443号', // 公安备案号
 		}
 	},
 	mounted() {
@@ -77,6 +88,14 @@ export default {
                 document.getElementById('main-content').style.marginLeft = '210px'
             }
         },
+        // 跳转
+        goRouter(val) {
+            switch (val) {
+                case 'github':
+                    window.open('https://github.com/RootLeeCoder/front_end_tools')
+                    break
+            }
+        }
 	}
 }
 </script>

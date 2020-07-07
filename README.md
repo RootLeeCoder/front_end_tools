@@ -10,13 +10,21 @@
 
 ```bash
 # 下载项目
+
 git clone https://github.com/RootLeeCoder/front_end_tools
+
 # 安装依赖
+
 npm install
+
 # 编译运行
+
 npm run serve
+
 # 编译打包
+
 npm run build
+
 ## 打包后请将 dist 文件夹部署到 Nginx 服务器上，直接打开 index.html 将无法运行
 ```
 
@@ -25,10 +33,10 @@ npm run build
 ### 交互细节
 
 - [ ] 侧边栏重写
+- [ ] 滚动条重写
 - [ ] 响应式布局
 
 ### 功能模块
-
 
 - [ ] Base64转图片
 - [ ] RGB和十六进制转换
