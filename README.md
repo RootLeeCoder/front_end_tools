@@ -21,6 +21,10 @@ npm install
 
 npm run serve
 
+# 本地访问
+
+http://localhost:8964/
+
 # 编译打包
 
 npm run build
