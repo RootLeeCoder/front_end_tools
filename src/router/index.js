@@ -5,8 +5,8 @@ Vue.use(VueRouter)
 
   const routes = [
     // 跳转到主页(目前是直接跳转到Base64)
-    { path: '/', redirect: '/Base64'},
-    { path: '*', redirect: '/Base64'},
+    { path: '/', redirect: '/Base64_Image'},
+    { path: '*', redirect: '/Base64_Image'},
     // Base64和图片转换
     {
       path: '/Base64_Image',

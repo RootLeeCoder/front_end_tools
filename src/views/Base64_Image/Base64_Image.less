@@ -5,4 +5,79 @@
         margin-left: 210px;
         padding: 20px;
     }
+    .box-card:nth-of-type(n+2) {
+        margin: 20px 0;
+    }
+    .box-card {
+        .image-to-base64-content {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-around;
+            .upload-left {
+                width: 45%;
+                border: 1px dotted #d9d9d9;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .file {
+                    position: relative;
+                    display: inline-block;
+                    background: #ecf5ff;
+                    border: 1px solid #b3d8ff;
+                    border-radius: 4px;
+                    padding: 12px 20px;
+                    overflow: hidden;
+                    color: #409eff;
+                    text-decoration: none;
+                    text-indent: 0;
+                    line-height: 1;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    input {
+                        position: absolute;
+                        font-size: 100px;
+                        right: 0;
+                        top: 0;
+                        opacity: 0;
+                    }
+                }
+                .file:hover {
+                    background: #409eff;
+                    border-color: #409eff;
+                    color: white;
+                    text-decoration: none;
+                }
+                .copy-button {
+                    margin-left: 20px;
+                }
+            }
+            .display-right {
+                width: 50%;
+            }
+        }
+        .base64-to-image-content {
+            .display-down {
+                display: flex;
+                box-sizing: border-box;
+                justify-content: space-between;
+                margin-top: 20px;
+                // border: 1px solid red;
+                .button-left {
+                    display: flex;
+                    align-items: center;
+                    width: 20%;
+                }
+                .image-right {
+                    display: flex;
+                    align-items: center;
+                    width: 50%;
+                    .img-container {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 }

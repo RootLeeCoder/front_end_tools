@@ -42,8 +42,9 @@ npm run build
 
 ### 功能模块
 
-- [ ] Base64转图片
+- [ ] Base64解密时的中文字符(d3gvcXE6IDQ0M+S9lTk3NOWNuDE1OQ==)
 - [ ] RGB和十六进制转换
+- [x] Base64和图片转换
 - [x] Base64转码
 - [x] MD5加密
 - [x] 时间戳转换
