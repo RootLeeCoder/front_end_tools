@@ -46,11 +46,11 @@ export default {
 	methods: {
 		// 加密
 		encode_base64Convert() {
-			this.decode = window.btoa(this.encode)
+			this.decode = window.btoa(unescape(encodeURIComponent(this.encode)))
 		},
 		// 解密
 		decode_base64Convert() {
-			this.encode = window.atob(this.decode)
+			this.encode = decodeURIComponent(escape(window.atob(this.decode)))
 		},
 		// 清空输入的内容
 		clearInput() {

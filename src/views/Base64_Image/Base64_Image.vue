@@ -139,16 +139,16 @@ export default {
 		},
 		// 复制转码后的Base64
 		copyBase64() {
-				let	_input = document.createElement("input")   // 直接构建input
-				_input.value = this.base64Converted // 设置内容
-				document.body.appendChild(_input)    // 添加临时实例
-				_input.select()   // 选择实例内容
-				document.execCommand("Copy")   // 执行复制
-				this.$message({ // 消息提示(可选)
-					message: '复制成功',
-					type: 'success'
-				})
-				document.body.removeChild(_input) // 删除临时实例
+			let	_input = document.createElement("input")   // 直接构建input
+			_input.value = this.base64Converted // 设置内容
+			document.body.appendChild(_input)    // 添加临时实例
+			_input.select()   // 选择实例内容
+			document.execCommand("Copy")   // 执行复制
+			this.$message({ // 消息提示(可选)
+				message: '复制成功',
+				type: 'success'
+			})
+			document.body.removeChild(_input) // 删除临时实例
 		}
 	}
 }
