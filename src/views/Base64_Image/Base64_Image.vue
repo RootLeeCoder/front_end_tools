@@ -9,10 +9,15 @@
 				</div>
 				<div class="image-to-base64-content">
 					<div class="upload-left">
-						<a href="javascript:;" class="file">选择文件
+						<a href="javascript:;" class="file">
+							<i class="el-icon-folder-add"></i>
+							选择图片
 							<input @change="processImage()" type="file" id="img_upload" />
 						</a>
-						<el-button type="primary" class="copy-button" @click="copyBase64()">复制内容</el-button>
+						<el-button type="success" plain class="copy-button" @click="copyBase64()">
+							<i class="el-icon-document-copy"></i>
+							复制内容
+						</el-button>
 					</div>
 					<div class="display-right">
 						<el-input
