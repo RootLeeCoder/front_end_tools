@@ -73,6 +73,17 @@ Vue.use(VueRouter)
         title: '哔哩哔哩av和BV号互转——前端工具合集'
       }
     },
+    // 长者曰(暂不开放)
+    {
+      path: '/ElderSay',
+      name: 'ElderSay',
+      component: function () {
+        return import('../views/ElderSay/ElderSay.vue')
+      },
+      meta: {
+        title: '长者曰——前端工具合集'
+      }
+    },
 ]
 
 const router = new VueRouter({
