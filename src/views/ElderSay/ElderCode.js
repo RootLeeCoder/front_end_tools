@@ -88,7 +88,7 @@ module.exports = {
         {
             id: 108,
             before: 'h',
-            after: '图样'
+            after: 'too young'
         },
         {
             id: 109,
@@ -123,7 +123,7 @@ module.exports = {
         {
             id: 115,
             before: 'o',
-            after: '华莱士'
+            after: '靴习'
         },
         {
             id: 116,
@@ -138,7 +138,7 @@ module.exports = {
         {
             id: 118,
             before: 'r',
-            after: '无中生有'
+            after: '你们啊'
         },
         {
             id: 119,
@@ -153,7 +153,7 @@ module.exports = {
         {
             id: 121,
             before: 'u',
-            after: '批判'
+            after: '批判一番'
         },
         {
             id: 122,
@@ -298,7 +298,7 @@ module.exports = {
         {
             id: 1024,
             before: 'X',
-            after: '红色法拉利'
+            after: '法拉利'
         },
         {
             id: 1025,

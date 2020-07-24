@@ -74,16 +74,16 @@ Vue.use(VueRouter)
       }
     },
     // 长者曰(暂不开放)
-    {
-      path: '/ElderSay',
-      name: 'ElderSay',
-      component: function () {
-        return import('../views/ElderSay/ElderSay.vue')
-      },
-      meta: {
-        title: '长者曰——前端工具合集'
-      }
-    },
+    // {
+    //   path: '/ElderSay',
+    //   name: 'ElderSay',
+    //   component: function () {
+    //     return import('../views/ElderSay/ElderSay.vue')
+    //   },
+    //   meta: {
+    //     title: '长者曰——前端工具合集'
+    //   }
+    // },
 ]
 
 const router = new VueRouter({

@@ -13,8 +13,8 @@
 			<div class="copy_button">
 				<el-button type="primary" @click="encode_base64Convert()">提高姿势水平↓↓↓</el-button>
 				<el-button type="warning" @click="decode_base64Convert()">听取人生经验↑↑↑</el-button>
-				<el-button type="primary" plain @click="copyEncode()">复制加密前内容↑↑↑</el-button>
-				<el-button type="warning" plain @click="copyDecode()">复制加密后内容↓↓↓</el-button>
+				<!-- <el-button type="primary" plain @click="copyEncode()">复制加密前内容↑↑↑</el-button>
+				<el-button type="warning" plain @click="copyDecode()">复制加密后内容↓↓↓</el-button> -->
 				<el-button type="info" @click="clearInput()">全部清空</el-button>
 				<el-button type="primary" class="intro" @click="openIntro()">关于 长者曰</el-button>
 			</div>
@@ -61,13 +61,6 @@ export default {
                 }
             }
         },
-        // 长者解码
-        decode_ElderCode() {
-            this.encode = ''
-            for (let i=0; i<this.pre_encode.length; i++) {
-
-            }
-        },
 		// 加密
 		encode_base64Convert() {
             this.pre_decode = window.btoa(unescape(encodeURIComponent(this.encode)))
@@ -75,8 +68,18 @@ export default {
 		},
 		// 解密
 		decode_base64Convert() {
-            this.pre_encode = decodeURIComponent(escape(window.atob(this.decode)))
-            this.decode_ElderCode()
+			this.pre_encode = ''
+			for (let i=0; i<this.decode.length; i++) {
+				for (let j=0; j<this.ElderData.length; j++) {
+					if (this.decode[i] == this.ElderData[j].after[0]) {
+						this.pre_encode += this.ElderData[j].before
+						i += this.ElderData[j].after.length - 1
+						break
+					}
+				}
+			}
+			console.log(this.pre_encode)
+            this.encode = decodeURIComponent(escape(window.atob(this.pre_encode)))
 		},
 		// 清空输入的内容
 		clearInput() {
