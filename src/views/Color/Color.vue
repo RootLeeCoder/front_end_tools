@@ -1,6 +1,5 @@
 <template>
 	<div class="container">
-		<SideBar></SideBar>
 		<div id="main-content">
 			<h2>RGB和十六进制转换</h2>
 			<div class="checkbox-container">

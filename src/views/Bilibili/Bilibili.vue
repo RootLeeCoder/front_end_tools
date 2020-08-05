@@ -1,6 +1,5 @@
 <template>
 	<div class="container">
-		<SideBar></SideBar>
 		<div id="main-content">
 			<h2 class="little-title">哔哩哔哩av和BV号转换</h2>
 			<div class="av-input">

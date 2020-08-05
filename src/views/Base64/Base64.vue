@@ -1,6 +1,5 @@
 <template>
 	<div class="container">
-		<SideBar></SideBar>
 		<div id="main-content">
 			<h2>Base64转码</h2>
             <el-input

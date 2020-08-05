@@ -1,6 +1,5 @@
 <template>
 	<div class="container">
-		<SideBar></SideBar>
 		<div id="main-content">
             <h2>Base64和图片转换</h2>
 			<el-card class="box-card">

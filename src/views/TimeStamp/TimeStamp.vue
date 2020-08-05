@@ -1,6 +1,5 @@
 <template>
 	<div class="container">
-		<SideBar></SideBar>
 		<div id="main-content">
             <h2>时间戳转换</h2>
 			<el-radio-group v-model="is_MS">

@@ -1,16 +1,19 @@
 <template>
 	<div class="container">
-		<div id="main-content">
-            Template
-        </div>
+		<SideBar></SideBar>
+		<!-- <NewSideBar></NewSideBar> -->
+		<div class="view-container">
+			<router-view></router-view>
+		</div>
 	</div>
 </template>
 
 <script>
 import SideBar from './../../components/SideBar/SideBar.vue'
+import NewSideBar from './../../components/NewSideBar/NewSideBar.vue'
 export default {
 	components: {
-		SideBar
+		SideBar, NewSideBar
 	},
 	data() {
 		return {
@@ -27,5 +30,5 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@import './Template.less';
+@import './Layout.less';
 </style>
