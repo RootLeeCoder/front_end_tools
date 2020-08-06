@@ -1,8 +1,8 @@
 <template>
 	<div class="container">
-		<SideBar></SideBar>
-		<!-- <NewSideBar></NewSideBar> -->
-		<div class="view-container">
+		<!-- <SideBar></SideBar> -->
+		<NewSideBar></NewSideBar>
+		<div id="view-container">
 			<router-view></router-view>
 		</div>
 	</div>
