@@ -17,22 +17,28 @@
                     <h2 style="color: #ffdd40">加密解密</h2>
                     <ul>
                         <li v-for="item in itemList_Encode" :key="item.id" @click="selectTool(1, item.id)">
-                            <i :class="item.icon"></i>
-                            {{item.name}}
+                            <span class="item_text">
+                                <i :class="item.icon"></i>
+                                {{item.name}}
+                            </span>
                         </li>
                     </ul>
                     <h2 style="color: #47cf73">实用转换</h2>
                     <ul>
                         <li v-for="item in itemList_TransForm" :key="item.id" @click="selectTool(2, item.id)">
-                            <i :class="item.icon"></i>
-                            {{item.name}}
+                            <span class="item_text">
+                                <i :class="item.icon"></i>
+                                {{item.name}}
+                            </span>
                         </li>
                     </ul>
                     <h2 style="color: #0ebeff">外部链接</h2>
                     <ul>
                         <li v-for="item in extLink" :key="item.id" @click="selectTool(3, item.id)">
-                            <i :class="item.icon"></i>
-                            {{item.name}}
+                            <span class="item_text">
+                                <i :class="item.icon"></i>
+                                {{item.name}}
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -70,12 +76,12 @@ export default {
                     icon: 'fa fa-file-image-o',
                     link: 'Base64_Image'
                 },
-                {
-                    id: 1,
-                    name: 'RGB和十六进制转换',
-                    icon: 'fa fa-tachometer',
-                    link: 'Color'
-                },
+                // {
+                //     id: 1,
+                //     name: 'RGB和十六进制转换',
+                //     icon: 'fa fa-tachometer',
+                //     link: 'Color'
+                // },
                 {
                     id: 2,
                     name: '时间戳转换',
