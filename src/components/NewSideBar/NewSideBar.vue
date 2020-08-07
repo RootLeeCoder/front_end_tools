@@ -16,7 +16,7 @@
                 <div class="main_index_container">
                     <h2 style="color: #ffdd40">加密解密</h2>
                     <ul>
-                        <li v-for="item in itemList_Encode" :key="item.id" @click="selectTool(1, item.id)">
+                        <li v-for="(item,index) in itemList_Encode" :key="index" @click="selectTool(1, index)">
                             <span class="item_text">
                                 <i :class="item.icon"></i>
                                 {{item.name}}
@@ -25,7 +25,7 @@
                     </ul>
                     <h2 style="color: #47cf73">实用转换</h2>
                     <ul>
-                        <li v-for="item in itemList_TransForm" :key="item.id" @click="selectTool(2, item.id)">
+                        <li v-for="(item,index) in itemList_TransForm" :key="index" @click="selectTool(2, index)">
                             <span class="item_text">
                                 <i :class="item.icon"></i>
                                 {{item.name}}
@@ -34,7 +34,7 @@
                     </ul>
                     <h2 style="color: #0ebeff">外部链接</h2>
                     <ul>
-                        <li v-for="item in extLink" :key="item.id" @click="selectTool(3, item.id)">
+                        <li v-for="(item,index) in extLink" :key="index" @click="selectTool(3, index)">
                             <span class="item_text">
                                 <i :class="item.icon"></i>
                                 {{item.name}}
