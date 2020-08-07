@@ -9,11 +9,12 @@
 </template>
 
 <script>
-import SideBar from './../../components/SideBar/SideBar.vue'
+// import SideBar from './../../components/SideBar/SideBar.vue'
 import NewSideBar from './../../components/NewSideBar/NewSideBar.vue'
 export default {
 	components: {
-		SideBar, NewSideBar
+		// SideBar,
+		NewSideBar,
 	},
 	data() {
 		return {

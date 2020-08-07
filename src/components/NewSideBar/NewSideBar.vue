@@ -104,6 +104,12 @@ export default {
                 },
                 {
                     id: 1,
+                    name: '私人图床',
+                    icon: 'fa fa-bed',
+                    link: 'http://212.64.93.67:8888/'
+                },
+                {
+                    id: 2,
                     name: '项目仓库',
                     icon: 'fa fa-github',
                     link: 'https://github.com/RootLeeCoder/front_end_tools'
