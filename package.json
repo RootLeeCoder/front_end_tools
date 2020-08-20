@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "element-ui": "^2.13.2",
-    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "js-md5": "^0.7.3",
     "moment": "^2.27.0",

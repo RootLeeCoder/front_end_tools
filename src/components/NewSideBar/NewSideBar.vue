@@ -14,33 +14,48 @@
             </div>
             <div class="main_index">
                 <div class="main_index_container">
-                    <h2 style="color: #ffdd40">加密解密</h2>
-                    <ul>
-                        <li v-for="(item,index) in itemList_Encode" :key="index" @click="selectTool(1, index)">
-                            <span class="item_text">
-                                <i :class="item.icon"></i>
-                                {{item.name}}
-                            </span>
-                        </li>
-                    </ul>
-                    <h2 style="color: #47cf73">实用转换</h2>
-                    <ul>
-                        <li v-for="(item,index) in itemList_TransForm" :key="index" @click="selectTool(2, index)">
-                            <span class="item_text">
-                                <i :class="item.icon"></i>
-                                {{item.name}}
-                            </span>
-                        </li>
-                    </ul>
-                    <h2 style="color: #0ebeff">外部链接</h2>
-                    <ul>
-                        <li v-for="(item,index) in extLink" :key="index" @click="selectTool(3, index)">
-                            <span class="item_text">
-                                <i :class="item.icon"></i>
-                                {{item.name}}
-                            </span>
-                        </li>
-                    </ul>
+                    <h2 style="color: #ffdd40" @click="isSpread_1 = !isSpread_1">
+                        加密解密
+                        <i :class="isSpread_1 ? 'el-icon-caret-bottom' : 'el-icon-caret-right'"></i>
+                    </h2>
+                    <el-collapse-transition>
+                        <ul v-if="isSpread_1">
+                            <li v-for="(item,index) in itemList_Encode" :key="index" @click="selectTool(1, index)">
+                                <span class="item_text">
+                                    <i :class="item.icon"></i>
+                                    {{item.name}}
+                                </span>
+                            </li>
+                        </ul>
+                    </el-collapse-transition>
+                    <h2 style="color: #47cf73" @click="isSpread_2 = !isSpread_2">
+                        实用转换
+                        <i :class="isSpread_2 ? 'el-icon-caret-bottom' : 'el-icon-caret-right'"></i>
+                    </h2>
+                    <el-collapse-transition>
+                        <ul v-if="isSpread_2">
+                            <li v-for="(item,index) in itemList_TransForm" :key="index" @click="selectTool(2, index)">
+                                <span class="item_text">
+                                    <i :class="item.icon"></i>
+                                    {{item.name}}
+                                </span>
+                            </li>
+                        </ul>
+                    </el-collapse-transition>
+                    <h2 style="color: #0ebeff" @click="isSpread_3 = !isSpread_3">
+                        外部链接
+                        <i :class="isSpread_3 ? 'el-icon-caret-bottom' : 'el-icon-caret-right'"></i>
+                    </h2>
+                    <el-collapse-transition>
+                        <ul v-if="isSpread_3">
+                            <li v-for="(item,index) in extLink" :key="index" @click="selectTool(3, index)">
+                                <span class="item_text">
+                                    <i :class="item.icon"></i>
+                                    {{item.name}}
+                                </span>
+                            </li>
+                        </ul>
+                    </el-collapse-transition>
                 </div>
             </div>
             <div class="footer_beian">
@@ -55,6 +70,9 @@ export default {
 	data() {
 		return {
             isFold: true, // 侧边栏是否展开，默认为展开
+            isSpread_1: true, // 加密解密是否展开
+            isSpread_2: true, // 实用转换是否展开
+            isSpread_3: true, // 外部链接是否展开
             itemList_Encode: [ // 加密解密
                 {
                     id: 0,
